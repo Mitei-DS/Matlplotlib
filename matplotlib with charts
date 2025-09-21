@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#Create dataframes from lists
+data={'county':['Lamu','Kericho','Bomet','Kisumu','Nairobi','Meru','Embu','Kisii'],
+      'Temp':[30,19,23,29,27,25,26,23],
+      'Rain':[30,32,40,45,33,31,35,37]}
+df=pd.DataFrame(data)
+print(df)
+#plot chart using matplotlib built ins
+df.plot(y=['Temp','Rain'],x="county", kind='bar',title='weather bar chart')
+df.plot(y=['Temp','Rain'],x="county", kind='line',title='weather line chart')
+df.plot(y=['Temp','Rain'],x="county", kind='hist',title='weather histogram chart')
+
+plt.show()
